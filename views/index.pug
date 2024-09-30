@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title 
+  p Welcome to #{title}
+
+  p The following API endpoints are available:
+  ul 
+    li 
+      a(href='/api/employees') List Employees (GET Method)
+    li 
+      a(href='/api/employees') Create Employee (POST Method)
+    li 
+      a(href='/api/employees/1') Employee Details (GET Method)
+    li 
+      a(href='/api/employees/1') Update Employee Details (PUT / PATCH Method)
+    li 
+      a(href='/api/employees/1') Delete Employee (DELETE Method)  
+  
