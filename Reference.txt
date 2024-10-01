@@ -1,0 +1,92 @@
+
+Database - Quick Intro 
+------------------
+  DB Server 
+    - Host / IP address (localhost)
+    - Port 
+    - Credentials 
+
+  DB Clients
+  -----
+    * Shell Clients (CLI)
+        * MongoDB Shell  (Download from MongoDB website)
+          -- then launch the shell from command line using the command 'mongosh'
+    * GUI Clients (GUI)  
+        - MongoDB Compas
+        - Robo 3T or Studio 3T
+
+    * Programming Clients
+
+Types of Databases
+----
+  1. Relational Databases (RDBMS)
+      Preferred for Structured Data 
+      Examples: Oracle, MySQL, PostgreSQL, SQL Server, MariaDB
+      Query Language: SQL
+
+      Data will be stored in Database. 
+        Data will be stored inside Tables.
+        Data will be stored in Columns & Rows.
+
+      
+
+  2. NoSQL Databases
+      Preferred for Unstructured Data
+      Examples: MongoDB
+      Query Language: JavaScript
+
+      Data will be stored in Database.
+        Data will be stored inside Collections.
+        Data will be stored in Documents.
+        Documents will have fields and values.
+
+      
+
+
+
+
+
+MongoDB 
+---
+  To see all dbs in the server
+    show dbs
+  
+  To Create a new db
+    use <db_name>
+    Database will be created if it does not exist and also selected as the default db.
+
+  To see current db
+    db
+
+  To Create a new collection
+    db.createCollection(<collection_name>)    // name must be string. ex: 'employees'
+
+  To See all collections in the db
+    show collections
+
+  To create a new document  (CREATE)
+    db.employees.insertOne({name: "John"});
+    db.employees.insertOne({name: "Jane", city: "London"})
+    db.employees.insertOne({age: 45, skillset: ['angular', 'react', 'js', 'nodejs']})
+
+  To read all documents  (READ)
+    db.employees.find()
+
+  To read a single document  (READ)
+    db.employees.findOne({name: 'Jane'})
+    db.employees.find({_id: ObjectId('66fb9ce2cad981a7c0d3ca16')})
+
+  To Update a document  (UPDATE)
+    db.employees.updateOne({name: 'Jane'}, {$set: {city: 'Sydney'}})
+    db.employees.updateOne({name: 'John'}, {$set: {phone: 24536788}})
+
+  
+
+
+
+
+  
+
+
+
+
