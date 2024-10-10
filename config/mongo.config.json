@@ -1,0 +1,6 @@
+{
+  "dbUrl": "mongodb://localhost:27017/employeesDb",
+  "username": "",
+  "password": "",
+  "options": { }
+}
